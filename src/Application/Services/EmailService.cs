@@ -51,7 +51,6 @@ namespace Application.Services
                     smtp.EnableSsl = true;
                     smtp.Send(mail);
                 }                
-                Console.WriteLine("Email Enviado! " + email.Content + credentials.User);
                 return new Shared.Result.CreatedResult<bool>(true);
             }
             catch(Exception ex)
